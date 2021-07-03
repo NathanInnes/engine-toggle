@@ -1,12 +1,14 @@
 {
-  "name": "dev",
-  "version": "0.0.1",
+  "name": "fivem-engine-toggle",
+  "version": "1.0.0",
+  "author": "Nathan Innes",
+  "description": "FiveM Engine Toggle Script allows the player to toggle their vehicle engine on and off.",
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "watch": "rollup -w -c rollup.config.js"
   },
-  "license": "MIT",
+  "license": "AGPL",
   "private": false,
   "devDependencies": {
     "@babel/core": "^7.14.6",
