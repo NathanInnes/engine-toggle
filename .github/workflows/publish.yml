@@ -1,4 +1,10 @@
-name: Publish NPM
+20 lines (18 sloc) 405 Bytes
+name: Release NPM
+
+on:
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   build:
@@ -9,18 +15,6 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm install
-
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Publish Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-          draft: false
-          prerelease: false
