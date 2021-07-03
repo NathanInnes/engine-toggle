@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "Nathan Innes",
   "description": "FiveM Engine Toggle Script allows the player to toggle their vehicle engine on and off.",
+  "keywords": ["fivem", "gta", "javascript", "typescript", "gta5", "gta5rp"],
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
